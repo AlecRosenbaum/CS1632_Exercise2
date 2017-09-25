@@ -86,7 +86,7 @@ public class LaboonCoin {
 
         for(char c : charSequence)
         {
-            n = (n* (int) c) + int (c);
+            n = (n* (int) c) + (int) c;
         }
 
 
