@@ -58,6 +58,52 @@ public class LaboonCoinTest {
 	assertEquals("TESTBLOCK1|00000000|000010e9|000a3cd8\nTESTBLOCK2|000a3cd8|00002ca8|0008ff30\nTESTBLOCK3|0008ff30|00002171|0009f908\n", blockChain);
     }
 	    
-    // TODO - PUT YOUR SIX TESTS HERE
+    /* USER ADDED TESTS */
     
+
+    @Test
+    public void hashTest001() {
+        assertEquals(1428150834, _l.hash("boo"));
+    }
+
+    // Viewing the blockchain as a full string which has valid
+    // elements should include all of the elements.  Note that the
+    // final element DOES have a trailing \n!
+    @Test
+    public void hashTest002() {
+        assertEquals(0x53c4142c, _l.hash("bill"));
+    }
+
+    // Viewing the blockchain as a full string which has valid
+    // elements should include all of the elements.  Note that the
+    // final element DOES have a trailing \n!
+    @Test
+    public void hashTest003() {
+        assertEquals(0x4e4587d6, _l.hash("laboon"));
+    }
+
+    // Viewing the blockchain as a full string which has valid
+    // elements should include all of the elements.  Note that the
+    // final element DOES have a trailing \n!
+    @Test
+    public void validHashTest001() {
+        assertTrue( _1.validHash(3,0x000fd98a));
+    }
+
+    // Viewing the blockchain as a full string which has valid
+    // elements should include all of the elements.  Note that the
+    // final element DOES have a trailing \n!
+    @Test
+    public void validHashTest002() {
+        assertFalse( _1.validHash(2,0x000fd98a));
+    }
+
+    // Viewing the blockchain as a full string which has valid
+    // elements should include all of the elements.  Note that the
+    // final element DOES have a trailing \n!
+    @Test
+    public void validHashTest003() {
+        assertTrue( _1.validHash(0,0xab000000));
+    }
+
 }
