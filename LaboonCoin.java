@@ -109,8 +109,18 @@ public class LaboonCoin {
      */
     
     public boolean validHash(int difficulty, int hash) {
-	// TODO - CHECK FOR VALID HASHES
-	return false;
+        
+        // shift then unshift (force unsigned)
+        int shifted = hash;
+        shifted = shifted << 8*difficulty;
+        shifted = shifted >>> 8*difficulty;
+
+        // check for equality
+        if (hash == shifted) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
