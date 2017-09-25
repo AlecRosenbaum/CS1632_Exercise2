@@ -95,7 +95,7 @@ public class LaboonCoinTest {
     // final element DOES have a trailing \n!
     @Test
     public void validHashTest002() {
-        assertFalse( _l.validHash(2, 0x000fd98a));
+        assertFalse( _l.validHash(2, 0x0acfd98a));
     }
 
     // Viewing the blockchain as a full string which has valid

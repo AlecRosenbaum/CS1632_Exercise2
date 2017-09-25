@@ -111,8 +111,8 @@ public class LaboonCoin {
 
         // shift then unshift (force unsigned)
         int shifted = hash;
-        shifted = shifted << 8 * difficulty;
-        shifted = shifted >>> 8 * difficulty;
+        shifted = shifted << 4 * difficulty;
+        shifted = shifted >>> 4 * difficulty;
 
         // check for equality
         if (hash == shifted) {
